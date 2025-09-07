@@ -1,6 +1,6 @@
 [package]
 name = "cruxmont-embedded-pg-test-macro"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "Procedural macros for embedded PostgreSQL testing in the Cruxmont web framework"
 license = "MIT"

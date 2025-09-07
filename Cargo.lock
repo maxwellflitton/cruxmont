@@ -334,10 +334,10 @@ version = "0.1.0"
 dependencies = [
  "axum",
  "cruxmont-db-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "cruxmont-embedded-pg-test-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-embedded-pg-test-macro 0.1.1",
  "cruxmont-http-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "cruxmont-pg-pool-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "cruxmont-pg-test-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-pg-test-macro 0.1.1",
  "cruxmont-test-utils 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "postgresql_embedded",
  "serde",
@@ -353,10 +353,10 @@ checksum = "9805e0a92cc2dd9dd65527065482df9e216788ba4cfe996cf44612dba4c9a1a8"
 dependencies = [
  "axum",
  "cruxmont-db-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "cruxmont-embedded-pg-test-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-embedded-pg-test-macro 0.1.1",
  "cruxmont-http-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "cruxmont-pg-pool-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "cruxmont-pg-test-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-pg-test-macro 0.1.1",
  "cruxmont-test-utils 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "postgresql_embedded",
  "serde",
@@ -391,6 +391,8 @@ dependencies = [
 [[package]]
 name = "cruxmont-embedded-pg-test-macro"
 version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8b8d13a97614d04919544d320bb0a19934acccbf60ddec8058460feedaa148ec"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -400,9 +402,7 @@ dependencies = [
 
 [[package]]
 name = "cruxmont-embedded-pg-test-macro"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8b8d13a97614d04919544d320bb0a19934acccbf60ddec8058460feedaa148ec"
+version = "0.1.2"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -453,6 +453,8 @@ dependencies = [
 [[package]]
 name = "cruxmont-pg-test-macro"
 version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "20e9213197786074ea716a61ad898a9310c60913946b1d9f58b16b16dea1fc3c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -462,9 +464,7 @@ dependencies = [
 
 [[package]]
 name = "cruxmont-pg-test-macro"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "20e9213197786074ea716a61ad898a9310c60913946b1d9f58b16b16dea1fc3c"
+version = "0.1.2"
 dependencies = [
  "proc-macro2",
  "quote",

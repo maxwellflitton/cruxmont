@@ -55,13 +55,13 @@ pub fn embedded_pg_test(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
             let test_result = rt.block_on(async {
                 // define the DB pool which is std::sync::LazyLock<sqlx::Pool<sqlx::Postgres>> inner = Pool<sqlx::Postgres>
-                db_pool_macro::define_pg_pool!(SQLX_POSTGRES_POOL, #env_lit, "DB_MAX_CONNECTIONS");
+                cruxmont::pg_pool::define_pg_pool!(SQLX_POSTGRES_TEST_POOL, #env_lit, "DB_MAX_CONNECTIONS");
 
                 struct TestDbHandle;
 
                 impl dal::connections::sqlx_postgres::YieldPostGresPool for TestDbHandle {
                     fn yield_pool() -> &'static sqlx::Pool<sqlx::Postgres> {
-                        &*SQLX_POSTGRES_POOL
+                        &*SQLX_POSTGRES_TEST_POOL
                     }
                 }
 
@@ -71,7 +71,7 @@ pub fn embedded_pg_test(_attr: TokenStream, item: TokenStream) -> TokenStream {
                 });
                 // handle.await   // → Result<Result<(), _>, JoinError>
                 let result = handle.await; // Await the handle
-                SQLX_POSTGRES_POOL.close().await; // Close the pool after awaiting
+                SQLX_POSTGRES_TEST_POOL.close().await; // Close the pool after awaiting
                 result // Return the handle's result
             });
 

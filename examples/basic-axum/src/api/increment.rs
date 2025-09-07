@@ -60,7 +60,7 @@ mod tests {
     #[embedded_pg_test]
     async fn test_increase_and_get_count() {
         // The SQLX_POSTGRES_POOL is provided by the test macro
-        let pool: &Pool<Postgres> = &*SQLX_POSTGRES_POOL;
+        let pool: &Pool<Postgres> = &*SQLX_POSTGRES_TEST_POOL;
         run_migrations(pool).await.expect("run migrations");
 
         // Initial count should be 0 (from migration)

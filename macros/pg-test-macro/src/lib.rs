@@ -81,13 +81,13 @@ pub fn pg_test(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
             let test_result = rt.block_on(async {
                 // define the DB pool which is std::sync::LazyLock<sqlx::Pool<sqlx::Postgres>> inner = Pool<sqlx::Postgres>
-                db_pool_macro::define_pg_pool!(SQLX_POSTGRES_POOL, #env_lit, "DB_MAX_CONNECTIONS");
+                cruxmont::pg_pool::define_pg_pool!(SQLX_POSTGRES_TEST_POOL, #env_lit, "DB_MAX_CONNECTIONS");
 
                 struct TestDbHandle;
 
                 impl cruxmont::dal::connections::sqlx_postgres::YieldPostGresPool for TestDbHandle {
                     fn yield_pool() -> &'static sqlx::Pool<sqlx::Postgres> {
-                        &*SQLX_POSTGRES_POOL
+                        &*SQLX_POSTGRES_TEST_POOL
                     }
                 }
 
