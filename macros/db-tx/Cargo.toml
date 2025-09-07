@@ -8,7 +8,7 @@ repository = "https://github.com/yourusername/cruxmont"
 homepage = "https://github.com/yourusername/cruxmont"
 documentation = "https://docs.rs/cruxmont-db-tx"
 keywords = ["database", "transactions", "macro", "cruxmont"]
-categories = ["database", "postgres", "web"]
+categories = ["database"]
 
 [lib]
 proc-macro = true
