@@ -1,0 +1,16 @@
+[package]
+name = "basic-axum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cruxmont = { workspace = true }
+axum = { workspace = true }
+tokio = { workspace = true }
+sqlx = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+http-body-util = { workspace = true }
+
+[dev-dependencies]
+cruxmont = { workspace = true, features = ["test", "embedded-pg"] }

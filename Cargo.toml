@@ -8,7 +8,7 @@ members = [
     "macros/http-tx",
     "crates/test-utils",
     "cruxmont",   
-    "bins/cruxmont-client",
+    "bins/cruxmont-client", "examples/basic-axum",
 ]
 
 [workspace.dependencies]
@@ -24,6 +24,7 @@ axum-extra  = { version = "0.10.1", features = ["typed-header"] }
 tower = { version = "0.5.2" }
 tower-http = { version = "0.6.6", features = ["trace", "cors"] }
 reqwest = { version = "0.11.24", features = ["json"] }
+http-body-util = "0.1.3"
 
 # Serialization & Data Types
 serde = { version = "1.0.196", features = ["derive"] }
@@ -52,9 +53,10 @@ ts-rs = { version = "11.0.1", features = ["chrono-impl", "uuid-impl", "serde-com
 cargo_metadata = "0.22.0"
 
 # local crates
-cruxmont-db-tx = { path = "macros/db-tx", version = "0.1.0" }
-cruxmont-embedded-pg-test-macro = { path = "macros/embedded-pg-test-macro", version = "0.1.0" }
-cruxmont-pg-pool-macro = { path = "macros/pg-pool-macro", version = "0.1.0" }
-cruxmont-pg-test-macro = { path = "macros/pg-test-macro", version = "0.1.0" }
-cruxmont-http-tx = { path = "macros/http-tx", version = "0.1.0" }
-cruxmont-test-utils = { path = "crates/test-utils", version = "0.1.0" }
+cruxmont-db-tx = { path = "macros/db-tx" }
+cruxmont-embedded-pg-test-macro = { path = "macros/embedded-pg-test-macro" }
+cruxmont-pg-pool-macro = { path = "macros/pg-pool-macro" }
+cruxmont-pg-test-macro = { path = "macros/pg-test-macro" }
+cruxmont-http-tx = { path = "macros/http-tx" }
+cruxmont-test-utils = { path = "crates/test-utils" }
+cruxmont = { path = "cruxmont" }

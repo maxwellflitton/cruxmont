@@ -1,6 +1,6 @@
 [package]
 name = "cruxmont-pg-pool-macro"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Procedural macro for curxmont for creating porgres DB pools"
 license = "MIT"

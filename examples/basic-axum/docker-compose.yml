@@ -1,0 +1,14 @@
+services:
+
+  postgres:
+    container_name: example-postgres
+    image: postgres:latest
+    restart: always
+    ports:
+      # port is 5433 externally but maps to 5432 to prevent clashing 
+      # from other postgres on the system
+      - '5433:5432'
+    environment:
+      - 'POSTGRES_USER=username'
+      - 'POSTGRES_DB=main_db'
+      - 'POSTGRES_PASSWORD=password'

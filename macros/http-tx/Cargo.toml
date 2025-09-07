@@ -1,6 +1,6 @@
 [package]
 name = "cruxmont-http-tx"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Procedural macros for implementing http transactions"
 license = "MIT"
