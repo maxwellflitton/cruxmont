@@ -18,12 +18,12 @@ serde = { workspace = true }
 thiserror = { workspace = true }
 postgresql_embedded = { workspace = true, optional = true }
 
-cruxmont-db-tx = { version = "0.1.0" }
-cruxmont-embedded-pg-test-macro = { version = "0.1.0", optional = true }
-cruxmont-pg-pool-macro = { version = "0.1.0" }
-cruxmont-pg-test-macro = { version = "0.1.0", optional = true }
-cruxmont-http-tx = { version = "0.1.0" }
-cruxmont-test-utils = { version = "0.1.0", optional = true }
+cruxmont-db-tx = { version = "0.1.1" }
+cruxmont-embedded-pg-test-macro = { version = "0.1.1", optional = true }
+cruxmont-pg-pool-macro = { version = "0.1.1" }
+cruxmont-pg-test-macro = { version = "0.1.1", optional = true }
+cruxmont-http-tx = { version = "0.1.1" }
+cruxmont-test-utils = { version = "0.1.1", optional = true }
 
 [features]
 test = ["cruxmont-test-utils", "cruxmont-pg-test-macro"]
