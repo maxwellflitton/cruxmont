@@ -1,0 +1,29 @@
+[package]
+name = "cruxmont"
+version = "0.1.0"
+edition = "2024"
+description = "A web framework for DB transactions, HTTP handling, and testing utilities" # Add a short description
+license = "MIT"
+repository = "https://github.com/maxwellflitton/cruxmont"
+homepage = "https://github.com/maxwellflitton/cruxmont"
+documentation = "https://docs.rs/cruxmont"
+readme = "../README.md"
+keywords = ["web", "database", "transactions", "testing", "axum"]
+categories = ["web-programming", "database", "postgres"]
+
+[dependencies]
+sqlx = { workspace = true }
+axum = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+cruxmont-db-tx = { workspace = true }
+cruxmont-pg-pool-macro = { workspace = true }
+cruxmont-http-tx = { workspace = true }
+
+cruxmont-test-utils = { workspace = true, optional = true }
+cruxmont-embedded-pg-test-macro = { workspace = true, optional = true }
+cruxmont-pg-test-macro = { workspace = true, optional = true }
+
+[features]
+test = ["cruxmont-test-utils", "cruxmont-pg-test-macro"]
+embedded-pg = ["cruxmont-embedded-pg-test-macro"]

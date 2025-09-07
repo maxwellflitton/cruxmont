@@ -1,0 +1,60 @@
+[workspace]
+resolver = "2"
+members = [
+    "macros/pg-pool-macro",
+    "macros/db-tx",
+    "macros/embedded-pg-test-macro",
+    "macros/pg-test-macro",
+    "macros/http-tx",
+    "crates/test-utils",
+    "cruxmont",   
+    "bins/cruxmont-client",
+]
+
+[workspace.dependencies]
+
+# Runtime & Concurrency
+tokio = { version = "1.47.1", features = ["rt", "rt-multi-thread", "process"] }
+futures = "0.3.31"
+futures-util = "0.3.31"
+
+# Web / Networking
+axum = { version = "0.8.4", features = ["ws"] }
+axum-extra  = { version = "0.10.1", features = ["typed-header"] }
+tower = { version = "0.5.2" }
+tower-http = { version = "0.6.6", features = ["trace", "cors"] }
+reqwest = { version = "0.11.24", features = ["json"] }
+
+# Serialization & Data Types
+serde = { version = "1.0.196", features = ["derive"] }
+serde_derive = "1.0.196"
+serde_json = "1.0.113"
+uuid = { version = "1.18.0", features = ["serde", "v4", "fast-rng"] }
+chrono = { version = "0.4.34", features = ["serde", "clock"], default-features = false }
+
+# DAL DB and storage
+sqlx = { version = "0.8.6", features = ["postgres", "json", "runtime-tokio", "runtime-tokio-native-tls", "migrate", "chrono", "uuid"] }
+postgresql_embedded = { version = "0.20.0", features = ["tokio"]}
+
+# for proc macros
+quote = "1.0.40"
+syn = { version = "2.0.106", features = ["full"] }
+proc-macro2 = "1.0.97"
+
+# Utility Crates
+bytes = "1.8.0"
+thiserror = "2.0.16"
+
+# ts codegen
+ts-rs = { version = "11.0.1", features = ["chrono-impl", "uuid-impl", "serde-compat"] }
+
+# builds
+cargo_metadata = "0.22.0"
+
+# local crates
+cruxmont-db-tx = { path = "macros/db-tx" }
+cruxmont-embedded-pg-test-macro = { path = "macros/embedded-pg-test-macro" }
+cruxmont-pg-pool-macro = { path = "macros/pg-pool-macro" }
+cruxmont-pg-test-macro = { path = "macros/pg-test-macro" }
+cruxmont-http-tx = { path = "macros/http-tx" }
+cruxmont-test-utils = { path = "crates/test-utils" }
