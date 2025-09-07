@@ -19,9 +19,9 @@ thiserror = { workspace = true }
 postgresql_embedded = { workspace = true, optional = true }
 
 cruxmont-db-tx = { version = "0.1.1" }
-cruxmont-embedded-pg-test-macro = { version = "0.1.2", optional = true }
+cruxmont-embedded-pg-test-macro = { version = "0.1.3", optional = true }
 cruxmont-pg-pool-macro = { version = "0.1.1" }
-cruxmont-pg-test-macro = { version = "0.1.2", optional = true }
+cruxmont-pg-test-macro = { version = "0.1.3", optional = true }
 cruxmont-http-tx = { version = "0.1.1" }
 cruxmont-test-utils = { version = "0.1.1", optional = true }
 
