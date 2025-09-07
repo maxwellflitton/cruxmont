@@ -52,9 +52,9 @@ ts-rs = { version = "11.0.1", features = ["chrono-impl", "uuid-impl", "serde-com
 cargo_metadata = "0.22.0"
 
 # local crates
-cruxmont-db-tx = { path = "macros/db-tx" }
-cruxmont-embedded-pg-test-macro = { path = "macros/embedded-pg-test-macro" }
-cruxmont-pg-pool-macro = { path = "macros/pg-pool-macro" }
-cruxmont-pg-test-macro = { path = "macros/pg-test-macro" }
-cruxmont-http-tx = { path = "macros/http-tx" }
-cruxmont-test-utils = { path = "crates/test-utils" }
+cruxmont-db-tx = { path = "macros/db-tx", version = "0.1.0" }
+cruxmont-embedded-pg-test-macro = { path = "macros/embedded-pg-test-macro", version = "0.1.0" }
+cruxmont-pg-pool-macro = { path = "macros/pg-pool-macro", version = "0.1.0" }
+cruxmont-pg-test-macro = { path = "macros/pg-test-macro", version = "0.1.0" }
+cruxmont-http-tx = { path = "macros/http-tx", version = "0.1.0" }
+cruxmont-test-utils = { path = "crates/test-utils", version = "0.1.0" }

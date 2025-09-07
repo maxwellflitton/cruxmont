@@ -2,7 +2,7 @@
 name = "cruxmont"
 version = "0.1.0"
 edition = "2024"
-description = "A web framework for DB transactions, HTTP handling, and testing utilities" # Add a short description
+description = "A web framework for DB transactions, HTTP handling, and testing utilities"
 license = "MIT"
 repository = "https://github.com/maxwellflitton/cruxmont"
 homepage = "https://github.com/maxwellflitton/cruxmont"
