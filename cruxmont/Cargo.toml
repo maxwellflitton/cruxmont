@@ -9,7 +9,7 @@ homepage = "https://github.com/maxwellflitton/cruxmont"
 documentation = "https://docs.rs/cruxmont"
 readme = "../README.md"
 keywords = ["web", "database", "transactions", "testing", "axum"]
-categories = ["web-programming", "database", "postgres"]
+categories = ["web-programming"]
 
 [dependencies]
 sqlx = { workspace = true }
