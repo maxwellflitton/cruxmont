@@ -1,6 +1,6 @@
 [package]
 name = "cruxmont"
-version = "0.1.1"
+version = "0.1.3"
 edition = "2024"
 description = "A web framework for DB transactions, HTTP handling, and testing utilities"
 license = "MIT"
