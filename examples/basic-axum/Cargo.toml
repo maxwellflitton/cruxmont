@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-cruxmont = { workspace = true }
+cruxmont = { version = "0.1.0" }
 axum = { workspace = true }
 tokio = { workspace = true }
 sqlx = { workspace = true }
@@ -13,4 +13,4 @@ serde_json = { workspace = true }
 http-body-util = { workspace = true }
 
 [dev-dependencies]
-cruxmont = { workspace = true, features = ["test", "embedded-pg"] }
+cruxmont = { version = "0.1.0", features = ["test", "embedded-pg"] }

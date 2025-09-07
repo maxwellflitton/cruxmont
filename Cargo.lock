@@ -171,7 +171,7 @@ name = "basic-axum"
 version = "0.1.0"
 dependencies = [
  "axum",
- "cruxmont",
+ "cruxmont 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "http-body-util",
  "serde",
  "serde_json",
@@ -331,6 +331,25 @@ checksum = "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28"
 [[package]]
 name = "cruxmont"
 version = "0.1.0"
+dependencies = [
+ "axum",
+ "cruxmont-db-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-embedded-pg-test-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-http-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-pg-pool-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-pg-test-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cruxmont-test-utils 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "postgresql_embedded",
+ "serde",
+ "sqlx",
+ "thiserror 2.0.16",
+]
+
+[[package]]
+name = "cruxmont"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9805e0a92cc2dd9dd65527065482df9e216788ba4cfe996cf44612dba4c9a1a8"
 dependencies = [
  "axum",
  "cruxmont-db-tx 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
