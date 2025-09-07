@@ -59,7 +59,7 @@ pub fn embedded_pg_test(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
                 struct TestDbHandle;
 
-                impl dal::connections::sqlx_postgres::YieldPostGresPool for TestDbHandle {
+                impl cruxmont::dal::connections::sqlx_postgres::YieldPostGresPool for TestDbHandle {
                     fn yield_pool() -> &'static sqlx::Pool<sqlx::Postgres> {
                         &*SQLX_POSTGRES_TEST_POOL
                     }
