@@ -2,7 +2,13 @@
 name = "cruxmont-pg-test-macro"
 version = "0.1.0"
 edition = "2024"
-publish = false
+description = "Procedural macros for PostgreSQL testing in the Cruxmont web framework"
+license = "MIT"
+repository = "https://github.com/yourusername/cruxmont"
+homepage = "https://github.com/yourusername/cruxmont"
+documentation = "https://docs.rs/cruxmont-embedded-pg-test-macro"
+keywords = ["database", "testing", "macro", "postgres", "cruxmont"]
+categories = ["database", "development-tools::procedural-macro-tools"]
 
 [lib]
 proc-macro = true

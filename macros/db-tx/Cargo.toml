@@ -2,7 +2,13 @@
 name = "cruxmont-db-tx"
 version = "0.1.0"
 edition = "2024"
-publish = false
+description = "Procedural macros for database transactions in the Cruxmont web framework"
+license = "MIT"
+repository = "https://github.com/yourusername/cruxmont"
+homepage = "https://github.com/yourusername/cruxmont"
+documentation = "https://docs.rs/cruxmont-db-tx"
+keywords = ["database", "transactions", "macro", "cruxmont"]
+categories = ["database", "development-tools::procedural-macro-tools"]
 
 [lib]
 proc-macro = true
